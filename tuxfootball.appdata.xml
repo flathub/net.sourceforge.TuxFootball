@@ -4,7 +4,12 @@
   <id type="desktop">tuxfootball.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
+   <name>Tux Football</name>
+   <name xml:lang="pt_BR">Tux Futebol</name>
+   <name xml:lang="es">Tux Fútbol</name>
   <summary>A great 2D soccer (sometimes called football) game</summary>
+  <summary xml:lang="pt_BR">Um divertido jogo de futebol - estrelando Tux, o pinguim</summary>
+  <summary xml:lang="es">Juega fútbol con Tux el pingüino</summary>
   <description>
     <p>
       It's bringing old style gameplay from DOS times back to the desktop with
@@ -21,6 +26,8 @@
       direction as the ball makes it dip towards the ground.
     </p>
   </description>
+  <description xml:lang="pt_BR"><p>Você gosta de futebol? Agora você pode jogar o dia todo com seus pinguins favoritos! Mostre suas habilidades e estratégia enquanto controla os jogadores com a bola. Muito em breve, você vai sentir como se estivesse pronto para assumir um time!</p></description>
+  <description xml:lang="es"><p>¿Te gusta el fútbol? ¡Ahora podrás jugar todo el día con tus pingüinos favoritos! Demuestra tus habilidades y estrategia, porque siempre controlarás a los jugadores con la pelota. ¡Podrás desarrollar tus habilidades, y muy pronto te sentirás como si puedes desafiar hasta a los profesionales!</p></description>
   <url type="homepage">http://tuxfootball.sourceforge.net</url>
   <screenshots>
     <screenshot type="default">http://tuxfootball.sourceforge.net/content/gallery/Screenshots/new-skin.png</screenshot>
