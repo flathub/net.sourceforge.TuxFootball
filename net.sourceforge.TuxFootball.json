@@ -1,55 +1,54 @@
 {
-    "app-id": "net.sourceforge.TuxFootball",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
-    "sdk": "org.freedesktop.Sdk",
-    "finish-args": [
-        "--device=dri",
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=pulseaudio"
-    ],
-    "rename-appdata-file": "tuxfootball.appdata.xml",
-    "rename-desktop-file": "tuxfootball.desktop",
-    "rename-icon": "tuxfootball",
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/share/aclocal",
-        "/share/man",
-        "*.la", "*.a"
-    ],
-    "modules": [
-        "shared-modules/SDL/SDL-1.2.15.json",
-        "shared-modules/smpeg/smpeg-0.4.5.json",
-        "shared-modules/SDL/SDL_mixer-1.2.12.json",
-        "shared-modules/SDL/SDL_image-1.2.12.json",
+  "app-id": "net.sourceforge.TuxFootball",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "19.08",
+  "sdk": "org.freedesktop.Sdk",
+  "finish-args": [
+    "--device=dri",
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=pulseaudio"
+  ],
+  "rename-desktop-file": "tuxfootball.desktop",
+  "rename-icon": "tuxfootball",
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/share/aclocal",
+    "/share/man",
+    "*.la",
+    "*.a"
+  ],
+  "modules": [
+    "shared-modules/SDL/SDL-1.2.15.json",
+    "shared-modules/smpeg/smpeg-0.4.5.json",
+    "shared-modules/SDL/SDL_mixer-1.2.12.json",
+    "shared-modules/SDL/SDL_image-1.2.12.json",
+    {
+      "name": "tuxfootball",
+      "rm-configure": true,
+      "sources": [
         {
-            "name": "tuxfootball",
-            "rm-configure": true,
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/tuxfootball/0.3/tuxfootball-0.3.1.tar.gz",
-                    "sha256": "44056c15572c2a3f0e3794719961915af15fef5f05596d2ef3f9e247f8a1f3e5"
-                },
-                {
-                    "type": "file",
-                    "path": "tuxfootball.appdata.xml"
-                },
-                {
-                    "type": "script",
-                    "dest-filename": "autogen.sh",
-                    "commands": [
-                        "cp /usr/share/gettext/po/Makefile.in.in po/",
-                        "autoreconf -vfi"
-                    ]
-                }
-            ],
-            "post-install": [
-                "mkdir -p /app/share/appdata",
-                "cp tuxfootball.appdata.xml /app/share/appdata"
-            ]
+          "type": "archive",
+          "url": "https://downloads.sourceforge.net/project/tuxfootball/0.3/tuxfootball-0.3.1.tar.gz",
+          "sha256": "44056c15572c2a3f0e3794719961915af15fef5f05596d2ef3f9e247f8a1f3e5"
+        },
+        {
+          "type": "file",
+          "path": "net.sourceforge.TuxFootball.metainfo.xml"
+        },
+        {
+          "type": "script",
+          "dest-filename": "autogen.sh",
+          "commands": [
+            "cp /usr/share/gettext/po/Makefile.in.in po/",
+            "autoreconf -vfi"
+          ]
         }
-    ]
+      ],
+      "post-install": [
+        "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml"
+      ]
+    }
+  ]
 }
