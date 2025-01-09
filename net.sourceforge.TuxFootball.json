@@ -1,12 +1,13 @@
 {
   "app-id": "net.sourceforge.TuxFootball",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "21.08",
+  "runtime-version": "24.08",
   "sdk": "org.freedesktop.Sdk",
   "finish-args": [
     "--device=all",
     "--share=ipc",
-    "--socket=x11",
+    "--socket=fallback-x11",
+    "--socket=wayland",
     "--socket=pulseaudio"
   ],
   "rename-desktop-file": "tuxfootball.desktop",
@@ -20,8 +21,7 @@
     "*.a"
   ],
   "modules": [
-    "shared-modules/SDL/SDL-1.2.15.json",
-    "shared-modules/smpeg/smpeg-0.4.5.json",
+    "shared-modules/SDL/sdl12-compat.json",
     "shared-modules/SDL/SDL_mixer-1.2.12.json",
     "shared-modules/SDL/SDL_image-1.2.12.json",
     {
