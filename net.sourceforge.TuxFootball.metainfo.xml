@@ -10,6 +10,9 @@
   <summary>A great 2D soccer (sometimes called football) game</summary>
   <summary xml:lang="pt_BR">Um divertido jogo de futebol - estrelando Tux, o pinguim</summary>
   <summary xml:lang="es">Juega fútbol con Tux el pingüino</summary>
+  <developer id="de.christophbrill">
+    <name>Christoph Brill</name>
+  </developer>
   <description>
     <p>
       It's bringing old style gameplay from DOS times back to the desktop with
@@ -27,23 +30,25 @@
     </p>
   </description>
   <launchable type="desktop-id">net.sourceforge.TuxFootball.desktop</launchable>
-  <url type="homepage">http://tuxfootball.sourceforge.net</url>
+  <url type="homepage">https://tuxfootball.sourceforge.net</url>
   <screenshots>
     <screenshot type="default">
-      <image>http://tuxfootball.sourceforge.net/content/gallery/Screenshots/new-skin.png</image>
+      <image>https://tuxfootball.sourceforge.net/content/gallery/Screenshots/new-skin.png</image>
     </screenshot>
     <screenshot>
-      <image>http://tuxfootball.sourceforge.net/content/gallery/Screenshots/tuxfootball-menu.png</image>
+      <image>https://tuxfootball.sourceforge.net/content/gallery/Screenshots/tuxfootball-menu.png</image>
     </screenshot>
   </screenshots>
   <releases>
     <release version="0.3.1" date="2012-04-09">
-        <ul>
-          <li>Add german translation</li>
-          <li>Fix bug where scores were not handled correct</li>
-          <li>Improve logging to console (using command line parameter "-d")</li>
-          <li>Add distinct goalie avatar</li>
-        </ul>
+        <description>
+            <ul>
+            <li>Add german translation</li>
+            <li>Fix bug where scores were not handled correct</li>
+            <li>Improve logging to console (using command line parameter "-d")</li>
+            <li>Add distinct goalie avatar</li>
+            </ul>
+        </description>
     </release>
   </releases>
   <content_rating type="oars-1.0" />
