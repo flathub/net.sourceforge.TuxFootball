@@ -39,6 +39,10 @@
           "path": "net.sourceforge.TuxFootball.metainfo.xml"
         },
         {
+          "type": "patch",
+          "path": "gettext-macro-0.20.patch"
+        },
+        {
           "type": "script",
           "dest-filename": "autogen.sh",
           "commands": [
