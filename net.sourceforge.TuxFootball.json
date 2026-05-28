@@ -4,6 +4,8 @@
   "runtime-version": "25.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "tuxfootball",
+  "rename-desktop-file": "tuxfootball.desktop",
+  "rename-icon": "tuxfootball",
   "finish-args": [
     "--device=all",
     "--share=ipc",
@@ -11,9 +13,8 @@
     "--socket=wayland",
     "--socket=pulseaudio"
   ],
-  "rename-desktop-file": "tuxfootball.desktop",
-  "rename-icon": "tuxfootball",
   "cleanup": [
+    "/doc",
     "/include",
     "/lib/pkgconfig",
     "/share/aclocal",
@@ -28,6 +29,9 @@
     {
       "name": "tuxfootball",
       "rm-configure": true,
+      "post-install": [
+        "install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -50,9 +54,6 @@
             "autoreconf -vfi"
           ]
         }
-      ],
-      "post-install": [
-        "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml"
       ]
     }
   ]
